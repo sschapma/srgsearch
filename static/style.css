@@ -1,5 +1,8 @@
 body 					{ color: gray; font-family: sans-serif; text-align: center; background-image: url('seoul.png');
-    			  		  background-size: 100%; background-attachment: fixed;}
+    			  		  background-size: 100%; background-attachment: fixed; background-repeat: no-repeat; 
+    			  		  webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;
+    					  background-size: cover; background-position: center;}
+html					{ height:100%; width:100%}
 h1, h3					{ color: white; text-align: center; border-left: auto; border-right: auto; }
 p 						{ color: white; font-size: 20px; }
 a:visited, a:link		{ color: gray; }
