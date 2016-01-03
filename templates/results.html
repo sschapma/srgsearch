@@ -1,0 +1,23 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Check out these restaurants!</br></h1>
+    <font size=3 color=white>(Results are listed alphabetically by rating)</font size>
+    <div class=restaurants>
+        {% for result in results %}
+          <font size=5><b><a href="http://{{ result[5] }}">{{ result[1] }}</a></br></b>
+          {% if result[3] == 4 %}&#9733;&#9733;&#9733;&#9733;
+          {% elif result[3] == 3 %}&#9733;&#9733;&#9733;
+          {% elif result[3] == 2 %}&#9733;&#9733;
+          {% else %}&#9733;
+          {% endif %}
+          &nbsp;&nbsp;&nbsp;
+          {{ result[2] }}</font size></br>
+          Type:    {{ result[4] }}</br>
+          Closest Subway:  {{ result[7] }}</br>
+          <a href="http://maps.google.com/?q={{ result[6] }}">{{ result[6] }}</a></br>
+          {{ result[8] }}</br></br>
+        {% endfor %}
+    </div>
+{% endblock %}

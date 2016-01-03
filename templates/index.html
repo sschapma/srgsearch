@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Seoul Restaurant Guide</title>
+  	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+  </head>
+	  <body>
+		<h1>Let us help you find a restaurant</h1>
+			<div class=drop>
+		    <form action="." method="POST">
+				First, pick a district (gu)</br>
+					<select name="district">
+					<option value="">Search All Districts</option>
+					<option value=""></option>
+					<option value="">***** Top 5 Districts *****</option>
+					<option value="Yongsan">Yongsan (Itaewon/HBC)</option>
+					<option value="Gangnam">Gangnam (Apgujeong/Cheongdam)</option>
+					<option value="Mapo">Mapo (Hongdae/Sangsu)</option>
+					<option value="Jongno">Jongno (City Hall/Temple Areas)</option>
+					<option value="Seocho">Seocho (French Village/Express Bus Terminal)</option>
+					<option value=""></option>
+					<option value="">***** Seoul Districts *****</option>
+					<option value="Dongdaemun">Dongdaemun</option>
+					<option value="Dongjak">Dongjak</option>
+					<option value="Gangdong">Gangdong</option>
+					<option value="Guro">Guro</option>
+					<option value="Gwanak">Gwanak</option>
+					<option value="Gwangjin">Gwangjin</option>
+					<option value="Jung-gu">Jung-gu</option>
+					<option value="Seodaemun">Seodaemun</option>
+					<option value="Seongbuk">Seongbuk</option>
+					<option value="Seongdong">Seongdong</option>
+					<option value="Songpa">Songpa</option>
+					<option value="Yeongdeungpo">Yeongdeungpo</option>
+					<option value=""></option>
+					<option value="">***** Others *****</option>
+					<option value="Ansan">Ansan</option>
+					<option value="Anyang">Anyang</option>
+					<option value="Bundang">Bundang</option>
+					<option value="Gimpo">Gimpo</option>
+					<option value="Goyang">Goyang</option>
+					<option value="Gwacheon">Gwacheon</option>
+					<option value="Pyeongtaek">Pyeongtaek</option>
+					<option value="Yongin">Yongin</option>
+					<option value="Franchises">Franchises</option>
+					<option value="Delivery Service">Delivery Service</option>
+		    	</select></br></br>
+
+		        Next, pick a minimum rating</br>
+		        	<select name="rate">
+				    <option value="1">Any Rating</option>
+				    <option value="2">Only exclude terrible options</option>
+				    <option value="3">Only good or great options</option>
+				    <option value="4">Only great restaurants</option>
+				</select></br></br>
+
+			    Now, pick a type of food</br>
+			    	<select name="type">
+				    <option value="">All Types of Food</option>
+					<option value="american">American</option>
+					<option value="asian">Asian</option>
+					<option value="australian">Australian</option>
+					<option value="bagels">Bagels</option>
+					<option value="bakery">Bakery</option>
+					<option value="bbq (american)">BBQ (American)</option>
+					<option value="korean bbq">BBQ (Korean)</option>
+					<option value="bibimbap">Bibimbap</option>
+					<option value="bistro">Bistro</option>
+					<option value="brazilian">Brazilian</option>
+					<option value="british">British</option>
+					<option value="brunch">Brunch</option>
+					<option value="buddhist">Buddhist</option>
+					<option value="buffet">Buffet</option>
+					<option value="bulgarian">Bulgarian</option>
+					<option value="burgers">Burgers</option>
+					<option value="cafe">Cafe</option>
+					<option value="cajun">Cajun</option>
+					<option value="camping">Camping</option>
+					<option value="chicken">Chicken</option>
+					<option value="chinese">Chinese</option>
+					<option value="cocktails">Cocktails</option>
+					<option value="cuban">Cuban</option>
+					<option value="curry">Curry</option>
+					<option value="czech">Czech</option>
+					<option value="deli">Deli</option>
+					<option value="dessert">Dessert</option>
+					<option value="dim sum">Dim Sum</option>
+					<option value="diner">Diner</option>
+					<option value="dumplings">Dumplings</option>
+					<option value="european">European</option>
+					<option value="filipino">Filipino</option>
+					<option value="fine casual">Fine Casual</option>
+					<option value="fine dining">Fine Dining</option>
+					<option value="french">French</option>
+					<option value="funnel cakes">Funnel Cakes</option>
+					<option value="fusion">Fusion</option>
+					<option value="german">German</option>
+					<option value="gobchang">Gobchang</option>
+					<option value="greek">Greek</option>
+					<option value="hanjeongsik">Han Jeong Sik</option>
+					<option value="hawaiian">Hawaiian</option>
+					<option value="home delivery">Home Delivery</option>
+					<option value="hot dogs">Hot Dogs</option>
+					<option value="ice cream">Ice Cream</option>
+					<option value="indian">Indian</option>
+					<option value="italian">Italian</option>
+					<option value="jamaican">Jamaican</option>
+					<option value="japanese">Japanese</option>
+					<option value="jazz">Jazz</option>
+					<option value="kimbap">Kimbap</option>
+					<option value="korean">Korean</option>
+					<option value="lamb">Lamb</option>
+					<option value="lobster">Lobster</option>
+					<option value="makgeolli">Makgeolli</option>
+					<option value="malaysian">Malaysian</option>
+					<option value="market">Market</option>
+					<option value="meatballs">Meatballs</option>
+					<option value="mexican">Mexican</option>
+					<option value="middle eastern">Middle Eastern</option>
+					<option value="milkshakes">Milkshakes</option>
+					<option value="modern">Modern</option>
+					<option value="noodles">Noodles</option>
+					<option value="pies">Pies</option>
+					<option value="pizza">Pizza</option>
+					<option value="portuguese">Portuguese</option>
+					<option value="prime rib">Prime Rib</option>
+					<option value="pub">Pub</option>
+					<option value="romanian">Romanian</option>
+					<option value="sandwiches">Sandwiches</option>
+					<option value="sausage">Sausage</option>
+					<option value="seafood">Seafood</option>
+					<option value="shop">Shop</option>
+					<option value="sicilian">Sicilian</option>
+					<option value="snacks">Snacks</option>
+					<option value="soup">Soup</option>
+					<option value="south african">South African</option>
+					<option value="spanish">Spanish</option>
+					<option value="steak">Steak</option>
+					<option value="swedish">Swedish</option>
+					<option value="swiss">Swiss</option>
+					<option value="tapas">Tapas</option>
+					<option value="thai">Thai</option>
+					<option value="turkish">Turkish</option>
+					<option value="uzbek">Uzbek</option>
+					<option value="vegetarian">Vegetarian</option>
+					<option value="vietnamese">Vietnamese</option>
+					<option value="western">Western</option>
+					<option value="wine">Wine Bar</option>
+			    </select></br></br>
+		        <input type="submit" name="my-form" value="Search">
+		    </form>
+			</div>
+	  </body>
+</html>
