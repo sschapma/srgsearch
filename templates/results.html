@@ -2,10 +2,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Check out these restaurants!</br></h1>
-    <font size=3 color=white>(Results are listed alphabetically by rating)</font size>
+<h1>Check out these restaurants!</br></h1>
+<font size=3 color=white>(Results are listed alphabetically by rating)</font size>
+    
     <div class=restaurants>
-
 
         {% for result in results %}
 
@@ -13,26 +13,26 @@
             {% else %}<font size=5><b><a href="http://{{ result[5] }}" target="_blank">{{ result[1] }}</a></br></b>
             {% endif %}
 
-            {% if result[3] == 4 %}&#9733;&#9733;&#9733;&#9733;
-            {% elif result[3] == 3 %}&#9733;&#9733;&#9733;
-            {% elif result[3] == 2 %}&#9733;&#9733;
-            {% else %}&#9733;
-            {% endif %}
-            &nbsp;&nbsp;&nbsp;
-            {{ result[2] }}</font size></br>
+            {% if result[3] == 4 %}&#9733;&#9733;&#9733;&#9733;{% elif result[3] == 3 %}&#9733;&#9733;&#9733;
+            {% elif result[3] == 2 %}&#9733;&#9733;{% else %}&#9733;{% endif %}
+            &nbsp;&nbsp;&nbsp;{{ result[2] }}</font size></br>
+
             Type:    {{ result[4] }}</br>
+
             Closest Subway:  {{ result[7] }}</br>
-            {% if result[6] == 'Franchise' %}{{ result[6] }}</br>
-            {% elif result[6] == 'Delivery' %}{{ result[6] }}</br>
+
+            {% if result[6] == 'Franchise' %}{{ result[6] }}</br>{% elif result[6] == 'Delivery' %}{{ result[6] }}</br>
             {% else %}<a href="http://maps.google.com/?q={{ result[6] }}" target="_blank">{{ result[6] }}</a></br>
             {% endif %}
+
             {{ result[8] }}</br></br>
+
         {% endfor %}
+
     </div>
+
     <div class=end>
-    <b>
-    If you didn't find what you are looking for,</br>
-    <a href="/">Try again</a> and be a little less specific.
-    </b>
+    <b>If you didn't find what you are looking for,</br><a href="/">try again</a> and be a little less specific.</b>
     </div>
+
 {% endblock %}
