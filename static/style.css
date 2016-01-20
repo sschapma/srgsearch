@@ -1,29 +1,47 @@
-body 			  { color: gray; font-family: sans-serif; text-align: center; }
-
-html 			  { background: url(seoul.png) no-repeat center center fixed; 
-					-webkit-background-size: cover; -moz-background-size: cover;
-					-o-background-size: cover; background-size: cover; }
-
-h1, h3			  { color: white; text-align: center; border-left: auto; border-right: auto; }
-
-p 				  { color: white; font-size: 20px; }
-
-a:visited, a:link { color: gray; }
-
-.drop		  	  { font-size: 25px; margin: auto; width: 15em; border: 5px solid #ccc;
-                  	padding: 0.8em; background: #e5e5ff; }
-
-.tip, .end		  { font-size: 15px; background: #e5e5ff; border: 5px solid #ccc; 
-					margin: auto; width: 35em; color: #2F4F4F; }
-
-.restaurants	  { margin: 2em auto; width: 35em; border: 5px solid #ccc;
-                  	padding: 0.8em; background: #e5e5ff; }
-
-#top 			  { margin: 1em auto; width: 5em; border: 0px solid #ccc;
-                  	padding: 0.1em; background: #e5e5ff; }
-
-input 			  { background-color: gray; border: none; color: white; font-size: 20px; 
-					padding: 16px 32px; margin: 4px 2px; }
-
-select 			  { width: 100%; padding: 16px 20px; border: solid #ccc; border-radius: 4px; 
-					background-color: #f1f1f1; }
+body { 
+	color: gray; 
+	font-family: sans-serif; 
+	text-align: center; 
+	background-image: url('seoul.png');
+    	background-size: 100%; 
+    	background-attachment: fixed;
+}
+h1, 
+h3 {
+	color: white; 
+	text-align: center; 
+	border-left: auto; 
+	border-right: auto; 
+}
+p { 
+	color: white; 
+	font-size: 20px; 
+}
+a:visited, 
+a:link { 
+	color: gray; 
+}
+.drop { 
+	font-size: 25px; 
+	margin: auto; 
+	width: 15em; 
+	border: 5px 
+	solid #ccc;
+    	padding: 0.8em; 
+    	background: #e5e5ff; 
+}
+.restaurants { 
+	margin: 2em auto; 
+	width: 35em; 
+	border: 5px solid #ccc;
+    	padding: 0.8em; 
+    	background: #e5e5ff; 
+}
+#top { 
+	margin: 1em auto; 
+	width: 5em; 
+	border: 0px 
+	solid #ccc;
+    	padding: 0.1em; 
+    	background: #e5e5ff; 
+}
