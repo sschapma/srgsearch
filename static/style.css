@@ -1,47 +1,138 @@
-body { 
-	color: gray; 
-	font-family: sans-serif; 
-	text-align: center; 
+body {
+	color: gray;
+	font-family: sans-serif;
+	text-align: center;
 	background-image: url('seoul.png');
-    	background-size: 100%; 
+    	background-size: cover;
     	background-attachment: fixed;
+			background-repeat: no-repeat;
 }
-h1, 
+
+h1,
 h3 {
-	color: white; 
-	text-align: center; 
-	border-left: auto; 
-	border-right: auto; 
+	color: white;
+	text-align: center;
+	border-left: auto;
+	border-right: auto;
 }
-p { 
-	color: white; 
-	font-size: 20px; 
+
+p {
+	color: white;
+	font-size: 20px;
 }
-a:visited, 
-a:link { 
-	color: gray; 
+
+a:visited,
+a:link {
+	color: gray;
 }
-.drop { 
-	font-size: 25px; 
-	margin: auto; 
-	width: 15em; 
-	border: 5px 
+
+.drop {
+	font-size: 25px;
+	margin: auto;
+	width: 15em;
+	border: 5px
 	solid #ccc;
-    	padding: 0.8em; 
-    	background: #e5e5ff; 
+    	padding: 0.8em;
+    	background: #e5e5ff;
 }
-.restaurants { 
-	margin: 2em auto; 
-	width: 35em; 
+
+select {
+	margin:15px 0 30px 0;
+	height: 40px;
+	font-size:.7em;
+	width: 90%;
+	border: 2px solid #ccc;
+}
+
+#search {
+		margin-top: -40px;
+		display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 24px;
+    border: 1px solid #4c0b0b;
+    border-radius: 8px;
+    background: #d21e1e;
+    background: -webkit-gradient(linear, left top, left bottom, from(#d21e1e), to(#4c0b0b));
+    background: -moz-linear-gradient(top, #d21e1e, #4c0b0b);
+    background: linear-gradient(to bottom, #d21e1e, #4c0b0b);
+    text-shadow: #2a0606 1px 1px 1px;
+    font: normal normal bold 20px trebuchet ms;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase
+}
+#search:hover {
+    border: 1px solid #540c0c;
+    background: #fc2424;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fc2424), to(#5b0d0d));
+    background: -moz-linear-gradient(top, #fc2424, #5b0d0d);
+    background: linear-gradient(to bottom, #fc2424, #5b0d0d);
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase
+}
+#search:active {
+    background: #4c0b0b;
+    background: -webkit-gradient(linear, left top, left bottom, from(#4c0b0b), to(#4c0b0b));
+    background: -moz-linear-gradient(top, #4c0b0b, #4c0b0b);
+    background: linear-gradient(to bottom, #4c0b0b, #4c0b0b);
+    text-transform: uppercase
+}
+
+.restaurants, .tip, .end {
+	margin: 2em auto;
+	width: 35em;
 	border: 5px solid #ccc;
-    	padding: 0.8em; 
-    	background: #e5e5ff; 
+    	padding: 0.8em;
+    	background: #e5e5ff;
 }
-#top { 
-	margin: 1em auto; 
-	width: 5em; 
-	border: 0px 
-	solid #ccc;
-    	padding: 0.1em; 
-    	background: #e5e5ff; 
+
+.tip, .end {
+	line-height: 1.5em;
+	padding: .2em;
+}
+
+.end a {
+	font-weight: 700;
+	text-transform: uppercase;
+	color:black;
+}
+
+#top {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px 10px;
+    border: 1px solid #7272a1;
+    border-radius: 8px;
+    background: #bbbbff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#bbbbff), to(#2c2c8a));
+    background: -moz-linear-gradient(top, #bbbbff, #2c2c8a);
+    background: linear-gradient(to bottom, #bbbbff, #2c2c8a);
+    text-shadow: #525273 2px 2px 2px;
+    font: normal normal bold 14px trebuchet ms;
+    color: #ffffff;
+    text-decoration: none;
+}
+#top:hover,
+#top:focus {
+    border: 1px solid #a3a3e6;
+    background: #e0e0ff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#e0e0ff), to(#3535a6));
+    background: -moz-linear-gradient(top, #e0e0ff, #3535a6);
+    background: linear-gradient(to bottom, #e0e0ff, #3535a6);
+    color: #ffffff;
+    text-decoration: none;
+}
+#top:active {
+    background: #7272a1;
+    background: -webkit-gradient(linear, left top, left bottom, from(#7272a1), to(#2c2c8a));
+    background: -moz-linear-gradient(top, #7272a1, #2c2c8a);
+    background: linear-gradient(to bottom, #7272a1, #2c2c8a);
+}
+
+#top a, #top a:active, #top a:visited {
+	color: #ffffff;
+	text-decoration:none;
 }
