@@ -1,5 +1,5 @@
 # [Seoul Restaurant Guide Search] (http://seoulbuzzsearch.herokuapp.com/)
-[Try](http://sschapman.com/img/sm-img/gifs/srg.gif)
+![](http://sschapman.com/img/gifs/srg.gif)
 
 ##This app searches a database of nearly 500 restaurants in the metropolitan area of Seoul, South Korea.
 
